@@ -1,0 +1,7 @@
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="BlogComponent">
+    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>
+
+<div>
+    <button (click)="toggle()">Click me!</button>
+</div>

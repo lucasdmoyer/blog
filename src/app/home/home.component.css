@@ -1,0 +1,32 @@
+.homeimage {
+    width: 100%;
+}
+
+.card-title {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.card-text {
+    margin: auto;
+    width: 95%;
+    text-align: center;
+}
+
+.buy {
+    display: inline-block;
+}
+
+.learnmore {
+    display: inline-block;
+    padding: 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+.cardholder {
+    padding-top: 70px;
+}

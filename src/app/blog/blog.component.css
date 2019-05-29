@@ -1,0 +1,25 @@
+.parallax1 {
+    /* The image used */
+    background-image: url("../../assets/wine.jpg");
+    /* Full height */
+    /* Set a specific height */
+    height: 100vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+:host {
+    display: block;
+}
+
+.BlogComponent {
+    padding-top: 100px;
+    border: 1px solid #dddddd;
+    margin-top: 10em;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
