@@ -1,7 +1,23 @@
-<div [@openClose]="isOpen ? 'open' : 'closed'" class="BlogComponent">
-    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+<h1 [@EnterLeave]>The Koi Life Blog</h1>
+<h2 [@EnterLeave]="'flyIn'">Read some stories</h2>
+
+<div class="parallax1">
+    <div class="caption">
+        SSCROLL
+    </div>
 </div>
 
-<div>
-    <button (click)="toggle()">Click me!</button>
+<div class="story">
+    <p>Every dog has a story</p>
+</div>
+
+<div class="parallax2">
+    <div class="caption">
+        SSCROLL2
+    </div>
+</div>
+<div (scroll)="onScroll($event)"></div>
+<div [@EnterLeave]>
+    <google-chart [title]="title" [type]="type" [data]="data" [columnNames]="columnNames" [options]="options">
+    </google-chart>
 </div>

@@ -1,3 +1,9 @@
+.story {
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+}
+
 .parallax1 {
     /* The image used */
     background-image: url("../../assets/wine.jpg");
@@ -9,6 +15,29 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.65;
+}
+
+.parallax2 {
+    background-image: url("../../assets/kembalean.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.65;
+}
+
+.caption {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: 4em;
 }
 
 :host {
@@ -22,4 +51,12 @@
     color: #000000;
     font-weight: bold;
     font-size: 20px;
+}
+
+h1 {
+    padding-top: 80px;
+}
+
+p {
+    color: pink;
 }
