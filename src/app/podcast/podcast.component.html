@@ -2,7 +2,7 @@
     Interactive Podcasts!
 </h1>
 
-<audio id="podcast" controls="controls">
+<audio id="podcast" controls="controls" ng-mouseover="getTime()">
     <source src="https://rss.art19.com/episodes/476a79f2-2bff-4bc3-a112-e107e19e492a.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
@@ -20,3 +20,12 @@
     </div>
     <button type="submit" class="btn btn-primary" (click)="newRequest(); consultationForm.reset()" [disabled]="!consultationForm.form.valid">Submit</button>
 </form>
+
+<div class="container">
+    <div *ngFor="let com of comments">
+        <div *ngIf="isAboutTime(com)">
+            <h2>{{com.name}}</h2>
+            <h3>{{com.comment}}</h3>
+        </div>
+    </div>
+</div>

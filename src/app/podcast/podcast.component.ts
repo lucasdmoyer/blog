@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { InteractivepodService} from '../interactivepod.service';
 
+
 @Component({
   selector: 'app-podcast',
   templateUrl: './podcast.component.html',
@@ -15,7 +16,7 @@ export class PodcastComponent implements OnInit {
   }
   submitted = false;
   onSubmit() { this.submitted = true; }
-
+  interval: any;
   comments: any[];
   constructor(private commentService: InteractivepodService) { }
   
@@ -27,13 +28,17 @@ export class PodcastComponent implements OnInit {
   }
 
   getTime() {
-    alert(this.podcast.currentTime);
+    //console.log(this.podcast.currentTime);
   }
   
   ngOnInit() {
     this.podcast = document.getElementById('podcast');
     this.getComments();
-    //console.log(this.comments);
+    this.interval = setInterval(() => {
+      this.getTime();
+    }, 1000);
+
+  
   }
 
   newRequest() {
@@ -48,8 +53,17 @@ export class PodcastComponent implements OnInit {
   getComments(): void {
     this.commentService.getComments().subscribe(comments => {
       this.comments = comments;
-      console.log(this.comments);
     })
+    
   }
 
+  isAboutTime(comment): boolean {
+    if (comment.time > this.podcast.currentTime + - 4 && comment.time < this.podcast.currentTime + 4) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  
 }

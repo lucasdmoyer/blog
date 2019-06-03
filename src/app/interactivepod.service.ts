@@ -10,7 +10,7 @@ export class InteractivepodService {
   comments: Observable<any[]>;
 
   constructor(private afs: AngularFirestore) {
-    this.commentsCollection = afs.collection<any>('comments');
+    this.commentsCollection = afs.collection<any>('comments', ref=> ref.orderBy('time', 'asc'));
     this.comments = this.commentsCollection.valueChanges();
   }
 
