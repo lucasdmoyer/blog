@@ -1,0 +1,22 @@
+<h1>
+    Interactive Podcasts!
+</h1>
+
+<audio id="podcast" controls="controls">
+    <source src="https://rss.art19.com/episodes/476a79f2-2bff-4bc3-a112-e107e19e492a.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+<button (click)="getTime()">Get TIme</button>
+
+<form (ngSubmit)="onSubmit()" #consultationForm="ngForm">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your name please" required [(ngModel)]="comment.name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="budget">Comment</label>
+        <input [(ngModel)]="comment.comment" name="comment" type="text" class="form-control" id="comment" required placeholder="What you sayin">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="newRequest(); consultationForm.reset()" [disabled]="!consultationForm.form.valid">Submit</button>
+</form>

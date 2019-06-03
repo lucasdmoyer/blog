@@ -1,0 +1,10 @@
+h1 {
+    padding-top: 80px;
+}
+
+audio {
+    min-width: 50px;
+    min-height: 50px;
+    width: 100%;
+    height: auto;
+}

@@ -56,7 +56,7 @@ import {
   ]
 })
 export class BlogComponent implements OnInit {
-
+  
   constructor() { }
 
   title = 'Population (in millions)';
