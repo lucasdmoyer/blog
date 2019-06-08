@@ -12,6 +12,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AsyncPipe } from '../../node_modules/@angular/common';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { AgmCoreModule } from '@agm/core';
 
 
 import { AppComponent } from './app.component';
@@ -19,13 +20,22 @@ import { BlogComponent } from './blog/blog.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { PodcastComponent } from './podcast/podcast.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { MyprofileComponent } from './myprofile/myprofile.component';
+import { MatchComponent } from './match/match.component';
+import { SeematchesComponent } from './seematches/seematches.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
     HomeComponent,
-    PodcastComponent
+    PodcastComponent,
+    UserProfileComponent,
+    MyprofileComponent,
+    MatchComponent,
+    SeematchesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +48,9 @@ import { PodcastComponent } from './podcast/podcast.component';
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDailJ9JeskFvhs1piBCG9DiJNBUY_C5Vc'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

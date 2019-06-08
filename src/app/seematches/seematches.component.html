@@ -1,0 +1,9 @@
+<h1>Here are your matches</h1>
+
+<div *ngIf="users">
+    <div *ngFor="let matches of users">
+        {{matches.displayName}}
+        <img src="{{matches.photoURL}}">
+    </div>
+
+</div>

@@ -1,0 +1,11 @@
+<div *ngIf="users && user">
+    <h1 *ngIf="user">Hello {{user.displayName}}</h1>
+    <h2>Try your luck!</h2>
+    <div *ngFor="let match of users">
+        <div *ngIf="(user.displayName != match.displayName) && !alreadyMatched(match)">
+            <h3>Name: {{match.displayName}}</h3>
+            <img class="profilePic" src="{{match.photoURL}}">
+            <button (click)="like(match)">Like!</button>
+        </div>
+    </div>
+</div>
